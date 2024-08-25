@@ -17,65 +17,6 @@
 </head>
 <body data-spy="scroll" data-target="#pb-navbar" data-offset="200">
 
-<header>
-        <a href="#" class="logo">Caysus Dilan Rodrigues</a>
-    </header>
-<style>
- .logo {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            padding: 20px 40px;
-            background: #11141a;
-            color: #fff;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            text-decoration: none;
-            transform: translateY(-100%);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .logo.visible {
-            transform: translateY(0);
-        }
-	.site-navbar {
-            position: fixed;
-            top: 60px; /* Adjust based on the height of your logo */
-            width: 100%;
-            background: #f8f9fa; /* Adjust the background color if needed */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            z-index: 1000;
-        }
-
-</style>
-	<script>
-        // JavaScript to handle the scroll event
-        window.addEventListener('scroll', function() {
-            var logo = document.querySelector('.logo');
-            var navbar = document.querySelector('.site-navbar');
-            if (window.scrollY > 100) { // Adjust this value as needed
-                logo.classList.add('visible');
-                navbar.classList.add('visible'); // Optionally, add a class to navbar if needed
-            } else {
-                logo.classList.remove('visible');
-                navbar.classList.remove('visible'); // Optionally, remove the class from navbar if needed
-            }
-        });
-
-        // Handle click event to scroll to top
-        document.querySelector('.logo').addEventListener('click', function(e) {
-            e.preventDefault(); // Prevent the default anchor link behavior
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth' // Smooth scrolling effect
-            });
-        });
-    </script>
-	
 	<nav class="navbar navbar-expand-lg site-navbar navbar-light bg-light" id="pb-navbar">
 
 		<div class="container">

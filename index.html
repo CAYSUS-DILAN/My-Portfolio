@@ -17,25 +17,43 @@
 </head>
 <body data-spy="scroll" data-target="#pb-navbar" data-offset="200">
 
-	<header>
-		<a href="#" class ="logo" >Caysus Dilan Rodrigues</a>
-	
+<header>
+        <a href="#" class="logo">Caysus Dilan Rodrigues</a>
+    </header>
 <style>
- .logo {
-	 position :fixed;
-	 top:0;
-	 left:0;
-	 width: 100%;
-	 padding: 20px 120px;
-	 background :#11141a;
-	 display: flex;
-	 justify-content: space-between;
-	 align-items: center;
-	 z-index: 100;
-	 
-	
+.logo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 40px;
+            background: #11141a;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+            transform: translateY(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .logo.visible {
+            transform: translateY(0);
+        }
 </style>
-	</header>
+	<script>
+        // JavaScript to handle the scroll event
+        window.addEventListener('scroll', function() {
+            var logo = document.querySelector('.logo');
+            if (window.scrollY > 100) { 
+                logo.classList.add('visible');
+            } else {
+                logo.classList.remove('visible');
+            }
+        });
+    </script>
 	<nav class="navbar navbar-expand-lg site-navbar navbar-light bg-light" id="pb-navbar">
 
 		<div class="container">

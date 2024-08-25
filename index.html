@@ -21,7 +21,7 @@
         <a href="#" class="logo">Caysus Dilan Rodrigues</a>
     </header>
 <style>
-.logo {
+ .logo {
             position: fixed;
             top: 0;
             left: 0;
@@ -47,11 +47,20 @@
         // JavaScript to handle the scroll event
         window.addEventListener('scroll', function() {
             var logo = document.querySelector('.logo');
-            if (window.scrollY > 100) { 
+            if (window.scrollY > 100) { // Adjust this value to control when the logo appears
                 logo.classList.add('visible');
             } else {
                 logo.classList.remove('visible');
             }
+        });
+
+        // JavaScript to handle the click event to scroll to top
+        document.querySelector('.logo').addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent the default anchor link behavior
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Smooth scrolling effect
+            });
         });
     </script>
 	<nav class="navbar navbar-expand-lg site-navbar navbar-light bg-light" id="pb-navbar">

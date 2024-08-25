@@ -16,13 +16,10 @@
 
 </head>
 <body data-spy="scroll" data-target="#pb-navbar" data-offset="200">
-
-
-  <header class="sticky-header">
+ <header id="header" class="sticky-header">
         <h1>Caysus Dilan Rodrigues</h1>
     </header>
-	
-<style>
+	<style></style>
 .sticky-header {
     position: -webkit-sticky; /* For Safari */
     position: sticky;
@@ -34,6 +31,22 @@
     z-index: 1000; /* Ensures the header stays on top of other content */
 }
 </style>
+ <script>
+	 document.addEventListener("DOMContentLoaded", function() {
+    // Get the current page URL
+    const currentPage = window.location.pathname;
+
+    // Define paths for pages where the header should be hidden
+    const homePagePaths = ['/', '/index.html'];
+
+    // Check if the current page is the home page
+    if (homePagePaths.includes(currentPage)) {
+        // Hide the sticky header on the home page
+        document.getElementById('header').style.display = 'none';
+    }
+});
+ </script>
+	
 	<nav class="navbar navbar-expand-lg site-navbar navbar-light bg-light" id="pb-navbar">
 
 		<div class="container">

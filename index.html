@@ -56,14 +56,17 @@
         // JavaScript to handle the scroll event
         window.addEventListener('scroll', function() {
             var logo = document.querySelector('.logo');
-            if (window.scrollY > 100) { // Adjust this value to control when the logo appears
+            var navbar = document.querySelector('.site-navbar');
+            if (window.scrollY > 100) { // Adjust this value as needed
                 logo.classList.add('visible');
+                navbar.classList.add('visible'); // Optionally, add a class to navbar if needed
             } else {
                 logo.classList.remove('visible');
+                navbar.classList.remove('visible'); // Optionally, remove the class from navbar if needed
             }
         });
 
-        // JavaScript to handle the click event to scroll to top
+        // Handle click event to scroll to top
         document.querySelector('.logo').addEventListener('click', function(e) {
             e.preventDefault(); // Prevent the default anchor link behavior
             window.scrollTo({

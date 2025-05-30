@@ -1,6 +1,6 @@
 # My Portfolio
 
-Welcome to my personal portfolio website! This site showcases my projects, skills, and experiences as a software developer.
+Welcome to my personal portfolio website! This site showcases my projects, skills, and experiences as a software developer..
 
 ## Table of Contents
 
